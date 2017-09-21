@@ -1,2 +1,2 @@
 # modular-js
-Testing modular JS
+To do list with react and webpack
