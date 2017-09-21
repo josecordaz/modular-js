@@ -7,16 +7,14 @@ class App extends React.Component {
     constructor(){
         super();
         this.state = {
-            data: []
+            data: ['uno']
         };
     }
     render () {
-        console.log(this.state.data);
-        let rend = this.state.data.map(item => {
-            return <li></li>;
-        }).join('');
-        console.log(rend);
-        return rend;
+        let ul = this.state.data.map((item, index) =>
+          <li key={index}>{item}</li>
+        );
+        return <ul>{ul}</ul>
     }
 }
 

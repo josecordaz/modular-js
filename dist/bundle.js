@@ -9767,7 +9767,7 @@ var App = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
         _this.state = {
-            data: []
+            data: ['uno']
         };
         return _this;
     }
@@ -9775,12 +9775,18 @@ var App = function (_React$Component) {
     _createClass(App, [{
         key: 'render',
         value: function render() {
-            console.log(this.state.data);
-            var rend = this.state.data.map(function (item) {
-                return _react2.default.createElement('li', null);
-            }).join('');
-            console.log(rend);
-            return rend;
+            var ul = this.state.data.map(function (item, index) {
+                return _react2.default.createElement(
+                    'li',
+                    { key: index },
+                    item
+                );
+            });
+            return _react2.default.createElement(
+                'ul',
+                null,
+                ul
+            );
         }
     }]);
 
